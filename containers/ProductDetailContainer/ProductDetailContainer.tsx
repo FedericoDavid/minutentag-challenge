@@ -40,8 +40,6 @@ const ProductDetailContainer = ({ product }: ProductDetailContainerType) => {
         getStockAndPrice()
     }, []);
 
-    console.log(productDetail, "productDetail");
-
     return (
         <div>
             {product.brand}

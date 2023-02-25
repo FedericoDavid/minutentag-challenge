@@ -4,6 +4,7 @@ import Image from 'next/image'
 import HomeContainer from '@/containers/HomeContainer'
 import productsData from '@/constants/pages/home/products'
 import { ProductsType } from '@/types/home'
+import Layout from '@/components/Layout'
 
 export type HomePageType = {
   products: ProductsType
@@ -18,7 +19,9 @@ const Home: NextPage<HomePageType> = () => (
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <HomeContainer products={productsData} />
+    <Layout>
+      <HomeContainer products={productsData} />
+    </Layout>
   </>
 );
 
