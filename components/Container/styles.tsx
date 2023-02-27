@@ -11,11 +11,11 @@ export const Wrapper = styled.div`
   margin: auto;
   padding: 0 16px;
 
-  @media ${({ theme }) => theme.breakPoints.laptop} {
-    max-width: ${({ theme }) => theme.layout.maxWidth};
+  @media(min-width: 1024px) {
+    max-width: 1224px;
   }
 
-  @media ${({ theme }) => theme.breakPoints.laptopL} {
+  @media(min-width: 1440px) {
     padding: 0;
   }
 `;

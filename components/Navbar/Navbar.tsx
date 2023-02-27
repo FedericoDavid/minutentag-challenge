@@ -10,8 +10,8 @@ const Navbar = () => {
           src="/images/main-logo.png"
           alt="main-logo"
           style={{ objectFit: "contain" }}
-          width={150}
-          height={100}
+          width={160}
+          height={120}
           priority
         />
       </LogoWrapper>

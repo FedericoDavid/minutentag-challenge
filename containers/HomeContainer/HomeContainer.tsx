@@ -1,13 +1,23 @@
 import React from 'react'
+import Card from '@/components/Card';
+import Container from '@/components/Container';
+import Header from '@/components/Header';
+import { CardWrapper, Title } from './styles';
 import { HomeContainerType } from './types'
 
 const HomeContainer = ({ products }: HomeContainerType) => {
     return (
-        <div>
-            {products.length > 0 && products.map((product) => (
-                <p key={product.id}>{product.brand}</p>
-            ))}
-        </div>
+        <>
+            <Header />
+            <Container>
+                <Title>Our Selection:</Title>
+                <CardWrapper>
+                    {products.length > 0 && products.map((product) => (
+                        <Card key={product.id} product={product} />
+                    ))}
+                </CardWrapper>
+            </Container>
+        </>
     )
 };
 

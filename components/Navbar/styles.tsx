@@ -11,11 +11,11 @@ export const Wrapper = styled.nav`
   height: 112px;
   width: 100vw;
 
-  padding: 0  16px 0 24px;
+  padding: 0 24px;
   background-color: transparent;
-  box-shadow: 0px 0px 16px rgb(10 10 43 / 33%);
+  z-index: 9;
 `;
 
 export const LogoWrapper = styled(Link)`
-  margin-left: 20px;
+  margin-left: 8px;
 `;

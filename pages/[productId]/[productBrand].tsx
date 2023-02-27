@@ -1,9 +1,10 @@
 import type { NextPage, NextPageContext } from 'next';
-import productsData from '@/constants/pages/home/products';
-import { ProductType } from '@/types/home';
 import Head from 'next/head';
 
+import productsData from '@/constants/pages/home/products';
+import { ProductType } from '@/types/home';
 import ProductDetailContainer from '@/containers/ProductDetailContainer';
+import Layout from '@/components/Layout';
 
 export const getServerSideProps = async ({ query }: NextPageContext) => {
     try {
@@ -40,7 +41,9 @@ const ProductDetailPage: NextPage<ProductDetailPageType> = ({ product }: Product
                 <meta name="description" content={description} />
                 <meta name="keywords" content='Beer, Beer Life, Brewery' />
             </Head>
-            <ProductDetailContainer product={product} />
+            <Layout>
+                <ProductDetailContainer product={product} />
+            </Layout>
         </>
     );
 };
